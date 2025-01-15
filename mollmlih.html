@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mollmlih</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #FAF3E0;
+            color: #C22422;
+            font-family: Montserrat;
+        }
+        .loading-screen {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #FAF3E0;
+            z-index: 1050;
+        }
+        .fade-in-out {
+            animation: fadeInOut 3.5s infinite;
+        }
+        @keyframes fadeInOut {
+            0%, 100% { opacity: 0; }
+            50% { opacity: 1; }
+        }
+        .logo {
+            width: 80px;
+            height: auto;
+        }
+        .btn-primary {
+            background-color: #C22422;
+            border-color: #C22422;
+        }
+        .btn-secondary {
+            background-color: #2C7537;
+            border-color: #2C7537;
+        }
+        .container {
+            margin-top: 15vh;
+            text-align: -webkit-center;
+        }
+        .card {
+            width: 25rem;
+        }
+        .title{
+            font-size: 2.5rem;
+            padding: 2dvh;
+            margin-bottom: 3dvh;
+        }
+        .row>*{
+            margin-top: 0;
+            padding-left: 0;
+            padding-right: 0;
+        }
+        .btn:hover{
+            background-color: #2C7537;
+            border-color: #2C7537;
+        }
+    </style>
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div class="loading-screen" id="loadingScreen">
+        <img class="logo fade-in-out" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB0AAAAgCAMAAADZqYNOAAAAbFBMVEXiqaj///+9AADkrq7CJCLksbD++/vIR0bmtrXLVFPAExDNXFvovbzPZGPADQnRbGzTdHO+AADqw8PVfXzXhYXajo3sycnclpbfn57BGBb67+/PZmWyx7XHQT/B0cMAZhAsdTfO28/Z49oEaRzcxN9uAAAAwklEQVR4AX3QBRbDIBAEUJZuXePu979jX2QiuPNxIcgRhDy5lM0MZXm24UWwg6+jsrwZ8f4Y1cLPB4868kvD94ehOn8lQ3X+eQyd2d9hMCJU5XBEqMrRjFBwPGEC/EB3nALla1OwkGifCJottRd5QEHQLPDUaSmt6l2wBpjQTnN8AA6go9JvYy8kVen7AQakK71n9n5kUro/mFl+yax0zfhTrFgqSpX3XLFuVL18d9iquoWuaY0KtGs/oqbAobUqsP0DP8ESvbCOjoAAAAAASUVORK5CYII=" alt="Logo">
+    </div>
+
+    <!-- Main Content -->
+    <div class="container">
+        <div class="title">
+            <h1 class="text-uppercase">Choose your next adventure</h1>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card">
+                    <img src="img/websiteImage.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Website</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">Your trusted destination for premium quality</h6>
+                        <p class="card-text ">Discover the essence of fresh, authentic products and explore our world of goodness and shop with ease!</p>
+                        <a href="https://mollmlih.co/" class="btn btn-primary">Visit the website</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card">
+                    <img src="img/instagramImage.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Instagram</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">Join our community and celebrate the art of fresh living.</h6>
+                        <p class="card-text ">
+                            Stay connected and inspired! Follow us on Instagram for the latest updates, recipes, and a peek into our journey.
+                        </p>
+                        <a href="https://www.instagram.com/mollmlihdotco" class="btn btn-primary">visit the page</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Show the main content after the loading screen
+        window.addEventListener('load', function() {
+            const loadingScreen = document.getElementById('loadingScreen');
+            const mainContent = document.getElementById('mainContent');
+
+            setTimeout(() => {
+                loadingScreen.style.display = 'none';
+                mainContent.style.display = 'block';
+            }, 3500); // 2 seconds delay
+        });
+    </script>
+</body>
+</html>
